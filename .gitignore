@@ -1,2 +1,33 @@
-src/categories.json
+# User configuration files
 config.yaml
+.env
+
+# Generated data files
+categories.json
+
+# Output directory
+output/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db

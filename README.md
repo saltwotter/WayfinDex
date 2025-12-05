@@ -22,6 +22,13 @@ WayfinDex queries multiple AI models simultaneously to gather comprehensive info
 
 3. **Set API keys:**
 
+   **Option 1: Use .env file (recommended)**
+   ```bash
+   cp .env.example .env
+   # Edit .env and add your API keys
+   ```
+
+   **Option 2: Export as environment variables**
    ```bash
    export OPENAI_API_KEY="your-key-here"
    export GEMINI_API_KEY="your-key-here"

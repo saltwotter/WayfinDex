@@ -61,6 +61,8 @@ When updating documentation:
 WayfinDex/
 ├── README.md              ← Start here
 ├── QUICKSTART.md          ← Installation & first run
+├── .env.example           ← Environment variables template
+├── categories.json        ← Place categories (auto-created)
 ├── docs/
 │   ├── README.md          ← This file
 │   ├── CONFIGURATION.md   ← Complete config reference
@@ -68,7 +70,6 @@ WayfinDex/
 ├── config.yaml.example    ← Configuration template
 ├── src/
 │   ├── main.py           ← CLI entry point
-│   ├── categories.json   ← Place categories (auto-created)
 │   ├── helpers/          ← Core modules (well-documented)
 │   ├── prompts/          ← Agent system prompts
 │   └── templates/        ← Output templates

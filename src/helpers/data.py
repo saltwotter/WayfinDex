@@ -45,7 +45,7 @@ def load_categories(file_path=None):
     Load place categories from a JSON file.
 
     Categories are used for validating and categorizing places in AI agent responses.
-    If no file path is provided, uses the default categories.json in the src directory.
+    If no file path is provided, uses the default categories.json in the repository root.
     If the file doesn't exist, creates it with default categories.
 
     Args:
@@ -55,8 +55,8 @@ def load_categories(file_path=None):
         List of category strings (e.g., ['restaurant', 'cafe', 'museum'])
     """
     if file_path is None:
-        # Default to categories.json in the src directory
-        file_path = Path(__file__).parent.parent / "categories.json"
+        # Default to categories.json in the repository root
+        file_path = Path(__file__).parent.parent.parent / "categories.json"
 
     # If file doesn't exist, create it with default categories
     if not Path(file_path).exists():

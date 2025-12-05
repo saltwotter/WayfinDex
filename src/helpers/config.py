@@ -6,7 +6,9 @@ including environment selection and agent activation.
 """
 
 import os
+from pathlib import Path
 import yaml
+from dotenv import load_dotenv
 from .type_models import WayfinDexConfig
 
 
@@ -26,9 +28,17 @@ class WayfinDexConfigLoader:
         """
         Initialize the configuration loader.
 
+        Loads environment variables from .env file if it exists in the repository root,
+        then loads and validates the YAML configuration.
+
         Args:
             config_path: Path to the YAML configuration file (default: config.yaml)
         """
+        # Load .env file from repository root if it exists
+        env_path = Path(config_path).parent / ".env"
+        if env_path.exists():
+            load_dotenv(env_path)
+
         self.config_path = config_path
         self.config: WayfinDexConfig = self.load_config()
 

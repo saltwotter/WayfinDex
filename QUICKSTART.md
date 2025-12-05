@@ -38,7 +38,16 @@ You should see the command options displayed.
    - Keep the ones you don't need commented out
    - Make sure model names are correct
 
-3. **Set API keys as environment variables:**
+3. **Set API keys:**
+
+   **Option 1: Use .env file (recommended)**
+
+   ```bash
+   cp .env.example .env
+   # Edit .env and add your actual API keys
+   ```
+
+   **Option 2: Set as environment variables**
 
    ```bash
    export OPENAI_API_KEY="sk-..."
@@ -46,7 +55,7 @@ You should see the command options displayed.
    # Add others as needed
    ```
 
-   **Tip**: Add these to your `~/.zshrc` or `~/.bashrc` to make them permanent.
+   **Tip**: The .env file is automatically loaded and ignored by git, keeping your keys safe.
 
 ## First Run
 

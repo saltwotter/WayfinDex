@@ -130,6 +130,26 @@ WayfinDex reads API keys from environment variables. The variable names are defi
 
 ### Setting Environment Variables
 
+**Option 1: Use .env file (recommended)**
+
+Create a `.env` file in the repository root:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` with your actual keys:
+
+```bash
+OPENAI_API_KEY=sk-...
+GEMINI_API_KEY=AI...
+ANTHROPIC_API_KEY=sk-ant-...
+```
+
+The `.env` file is automatically loaded when you run WayfinDex and is ignored by git.
+
+**Option 2: Export as shell variables**
+
 **macOS/Linux:**
 
 ```bash

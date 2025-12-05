@@ -347,7 +347,7 @@ wayfindex --agent-group prod --query "Place" --template my_template.md
 
 ### Custom Categories
 
-Categories are automatically created with defaults if `src/categories.json` doesn't exist. To customize:
+Categories are automatically created with defaults if `categories.json` doesn't exist in the repository root. To customize:
 
 ```json
 {
@@ -356,6 +356,17 @@ Categories are automatically created with defaults if `src/categories.json` does
 ```
 
 The system will auto-generate this file on first run if it's missing.
+
+### Environment Variables
+
+WayfinDex automatically loads environment variables from a `.env` file in the repository root if it exists. This is handled by the `WayfinDexConfigLoader` during initialization.
+
+Create `.env` from the example:
+```bash
+cp .env.example .env
+```
+
+The `.env` file is git-ignored for security.
 
 ## Performance Considerations
 
