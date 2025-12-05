@@ -57,24 +57,19 @@ def load_categories(file_path=None):
     if file_path is None:
         # Default to categories.json in the src directory
         file_path = Path(__file__).parent.parent / "categories.json"
-    
+
     # If file doesn't exist, create it with default categories
     if not Path(file_path).exists():
         default_categories = [
             "restaurant",
-            "cafe",
-            "bar",
             "museum",
             "park",
             "shopping",
-            "attraction",
-            "entertainment",
             "hotel",
-            "services"
         ]
         save_categories(default_categories, str(file_path))
         return default_categories
-    
+
     data = load_json(file_path)
     return data.get("categories", [])
 

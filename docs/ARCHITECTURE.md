@@ -216,8 +216,8 @@ User Input
 │  │ Agent 1    │  │ Agent 2    │  │
 │  │ (GPT-4)    │  │ (Gemini)   │  │
 │  └─────┬──────┘  └─────┬──────┘  │
-│        │                │         │
-│        ▼                ▼         │
+│        │               │         │
+│        ▼               ▼         │
 │  ┌────────────┐  ┌────────────┐  │
 │  │ PlaceResult│  │ PlaceResult│  │
 │  └────────────┘  └────────────┘  │
@@ -334,6 +334,7 @@ def create_newprovider_agents(self) -> list[PlaceSearchAgent]:
 
 1. Create new template in `src/templates/`
 2. Use with `--template` flag:
+
 ```bash
 wayfindex --agent-group prod --query "Place" --template my_template.md
 ```
