@@ -11,6 +11,9 @@ dependencies = [
     "pyyaml>=6.0.3",
 ]
 
+[project.scripts]
+wayfindex = "src.main:main"
+
 [dependency-groups]
 dev = [
     "ruff>=0.14.7",

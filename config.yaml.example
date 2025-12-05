@@ -1,10 +1,23 @@
 # WayfinDex Configuration Example
 # Copy this file to config.yaml and update with your actual settings
 
-# List of active agents to use
-# Options: gemini, openai, perplexity, openrouter, anthropic
-active_agents:
-  - openai
+# List of agent groups with their respective agents
+# Each agent group has a name and a list of agents
+# Agent format: provider_modelname (e.g., openai_gpt-4, gemini_gemini-pro)
+# Use the group name with --agent-group flag when running wayfindex
+environments:
+  - name: production
+    agents:
+      - openai_gpt-4
+      - gemini_gemini-pro
+  - name: development
+    agents:
+      - openai_gpt-3.5-turbo
+  - name: testing
+    agents:
+      - anthropic_claude-3-opus-20240229
+      - perplexity_pplx-7b-online
+      - openrouter_anthropic/claude-2
 
 # OpenAI Configuration
 openai_api_key_env_var: OPENAI_API_KEY
